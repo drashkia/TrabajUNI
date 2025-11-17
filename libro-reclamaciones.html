@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Libro de Reclamaciones - La Casa de Luci. Presenta tus reclamos, quejas o sugerencias de forma oficial.">
+    <meta name="keywords" content="libro de reclamaciones, reclamos, quejas, sugerencias, La Casa de Luci">
+    <meta name="author" content="La Casa de Luci">
+    <title>Libro de Reclamaciones - La Casa de Luci</title>
+    
+    <link rel="icon" href="assents/imagenes/iconos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assents/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- === HEADER SOLIDO === -->
+    <header class="main-header solid-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assents/imagenes/iconos/LogoSf2.png" alt="La Casa de Luci" width="70" height="40">
+                <h1>La Casa de Luci</h1>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="menu.html">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    <span>Carta</span>
+                </a>
+                <a href="nosotros.html">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <span>Nosotros</span>
+                </a>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <!--<button class="btn-login" id="openLoginModal">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                    <span>Ingresar</span>
+                </button>-->
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- === FORMULARIO RECLAMACIONES === -->
+    <main class="complaints-main">
+        <div class="container">
+            <div class="complaints-container">
+                <!-- Información Importante -->
+                <div class="complaints-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Información Importante</h3>
+                            <p>Este es el Libro de Reclamaciones oficial de <strong>La Casa de Luci</strong>. Todos los reclamos serán atendidos dentro del plazo legal establecido.</p>
+                            <ul>
+                                <li><strong>Plazo de respuesta:</strong> 15 días hábiles</li>
+                                <li><strong>Horario de atención:</strong> Lunes a Domingo 10:00 AM - 10:00 PM</li>
+                                <li><strong>Teléfono:</strong> (+51) 970 170 964</li>
+                                <li><strong>Correo:</strong> lacasadeluci@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario Principal -->
+                <form class="complaints-form" id="complaintsForm" novalidate>
+                    <div class="form-section">
+                        <h2 class="section-title">Datos del Reclamante</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reclamoTipo">Tipo de Documento <span class="required">*</span></label>
+                                <select id="reclamoTipo" name="tipoDocumento" required>
+                                    <option value="">Seleccione tipo</option>
+                                    <option value="dni">DNI</option>
+                                    <option value="ce">Carnet de Extranjería</option>
+                                    <option value="pasaporte">Pasaporte</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reclamoDocumento">Número de Documento <span class="required">*</span></label>
+                                <input type="text" id="reclamoDocumento" name="numeroDocumento" required 
+                                       pattern="[0-9]{8,12}" title="Ingrese un número de documento válido">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reclamoNombres">Nombres <span class="required">*</span></label>
+                                <input type="text" id="reclamoNombres" name="nombres" required 
+                                       pattern="[A-Za-záéíóúñüÁÉÍÓÚÑÜ\s]{2,}" title="Ingrese nombres válidos">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reclamoApellidos">Apellidos <span class="required">*</span></label>
+                                <input type="text" id="reclamoApellidos" name="apellidos" required 
+                                       pattern="[A-Za-záéíóúñüÁÉÍÓÚÑÜ\s]{2,}" title="Ingrese apellidos válidos">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reclamoEmail">Correo Electrónico <span class="required">*</span></label>
+                                <input type="email" id="reclamoEmail" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reclamoTelefono">Teléfono / Celular <span class="required">*</span></label>
+                                <input type="tel" id="reclamoTelefono" name="telefono" required 
+                                       pattern="[0-9+]{9,15}" title="Ingrese un número de teléfono válido">
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="reclamoDireccion">Dirección <span class="required">*</span></label>
+                            <input type="text" id="reclamoDireccion" name="direccion" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-title">Detalles del Reclamo</h2>
+
+                        <div class="form-group">
+                            <label for="reclamoTipoSolicitud">Tipo de Solicitud <span class="required">*</span></label>
+                            <select id="reclamoTipoSolicitud" name="tipoSolicitud" required>
+                                <option value="">Seleccione tipo</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="queja">Queja</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="felicitacion">Felicitación</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reclamoFecha">Fecha del Hecho <span class="required">*</span></label>
+                            <input type="date" id="reclamoFecha" name="fechaHecho" required 
+                                   max="<?php echo date('Y-m-d'); ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reclamoMonto">Monto Reclamado (S/)</label>
+                            <input type="number" id="reclamoMonto" name="montoReclamado" 
+                                   min="0" step="0.01" placeholder="0.00">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="reclamoDetalle">Detalle del Reclamo <span class="required">*</span></label>
+                            <textarea id="reclamoDetalle" name="detalleReclamo" rows="6" required 
+                                      placeholder="Describa detalladamente su reclamo, queja o sugerencia. Incluya todos los detalles relevantes como productos involucrados, horarios, personas, etc."></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span> / 1000 caracteres
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="reclamoPedido">¿Desea que le contactemos?</label>
+                            <div class="radio-group">
+                                <label class="radio-container">
+                                    <input type="radio" name="contacto" value="si" checked>
+                                    <span class="radiomark"></span>
+                                    Sí, deseo que me contacten para seguir mi reclamo
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="contacto" value="no">
+                                    <span class="radiomark"></span>
+                                    No, solo deseo dejar constancia del hecho
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-title">Documentación Adjunta (Opcional)</h2>
+                        
+                        <div class="file-upload-group">
+                            <label class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Adjuntar archivos de soporte</span>
+                                <input type="file" id="reclamoArchivos" name="archivos" 
+                                       multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" 
+                                       class="file-upload-input">
+                            </label>
+                            <div class="file-upload-info">
+                                <p>Formatos permitidos: JPG, PNG, PDF, DOC (Máx. 5MB por archivo)</p>
+                                <div class="file-preview" id="filePreview"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="aceptoTerminos" required>
+                                <span class="checkmark"></span>
+                                Acepto que mis datos sean procesados según la <a href="https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/243470-29733" target="_blank">Ley de Protección de Datos Personales</a> <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button type="button" class="btn btn-outline" id="btnLimpiar">
+                                <i class="fas fa-eraser"></i>
+                                Limpiar Formulario
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Reclamo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Confirmación de Envío -->
+                <div class="confirmation-message" id="confirmationMessage" style="display: none;">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>¡Reclamo Enviado Exitosamente!</h3>
+                    <p>Hemos recibido tu reclamo con el número de ticket: <strong id="ticketNumber">LR-2024-001</strong></p>
+                    <p>Te contactaremos dentro de los próximos 15 días hábiles.</p>
+                    <div class="confirmation-actions">
+                        <button class="btn btn-outline" id="btnNuevoReclamo">
+                            <i class="fas fa-plus"></i>
+                            Nuevo Reclamo
+                        </button>
+                        <button class="btn btn-primary" id="btnImprimir">
+                            <i class="fas fa-print"></i>
+                            Imprimir Comprobante
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- === INFORMACIÓN ADICIONAL === -->
+    <section class="complaints-info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Plazos de Respuesta</h3>
+                    <p>Todos los reclamos serán respondidos dentro de los 15 días hábiles establecidos por la ley peruana.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Protección de Datos</h3>
+                    <p>Tus datos personales están protegidos según la Ley de Protección de Datos Personales - Ley N° 29733.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Otros Canales</h3>
+                    <p>También puedes contactarnos por WhatsApp, teléfono o visitar nuestro local en Carabayllo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === FOOTER === -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="assents/imagenes/iconos/LogoBlanco.png" alt="La Casa de Luci" class="logo-img">
+                    </div>
+                    <p>Comida rápida con sabor casero en el corazón de Carabayllo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Carta</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cart.html">Carrito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (+51) 970 170 964</li>
+                        <li><i class="fas fa-envelope"></i> lacasadeluci@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Carabayllo, Lima</li>
+                        <li><i class="fas fa-clock"></i> 10:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politicas-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Casa de Luci - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assents/js/cart-system.js"></script>
+    <script src="assents/js/navigation.js"></script>
+    <script src="assents/js/libro.js"></script>
+    <script src="assents/js/main.js"></script>
+</body>
+</html>

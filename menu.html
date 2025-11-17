@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carta completa de La Casa de Luci - Broasters, Salchipapas, Hamburguesas, Bebidas y más. ¡Descubre nuestro menú completo!">
+    <meta name="keywords" content="carta, menú, broaster, salchipapas, hamburguesas, bebidas, pollo, comida rápida">
+    <meta name="author" content="La Casa de Luci">
+    
+    <title>Carta Completa - La Casa de Luci</title>
+    
+    <link rel="icon" href="assents/imagenes/iconos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assents/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- === HEADER SOLIDO === -->
+    <header class="main-header solid-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assents/imagenes/iconos/LogoSf2.png" alt="La Casa de Luci">
+                <h1>La Casa de Luci</h1>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="menu.html" class="active">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    <span>Carta</span>
+                </a>
+                <a href="nosotros.html">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <span>Nosotros</span>
+                </a>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <!--<a href="login.html" class="btn-login">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                    <span>Ingresar</span>
+                </a>-->
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- === HERO CARTA SEPARADO === -->
+    <section class="menu-hero-separated" aria-labelledby="menu-hero-title">
+        <!-- Carrusel de Imágenes -->
+        <div class="menu-carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="assents/imagenes/layout/Banner.jpg" alt="Nuestros Broasters - Pollo crujiente y jugoso" loading="lazy">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assents/imagenes/productos/Salcgipapa.jpg" alt="Deliciosas Salchipapas - Papas doradas con salchichas" loading="lazy">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assents/imagenes/productos/HamburguesaClasica.jpg" alt="Hamburguesas Especiales - Jugosas y llenas de sabor" loading="lazy">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Controles del Carrusel -->
+            <button class="carousel-prev" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="carousel-next" aria-label="Siguiente imagen">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+        <!-- Contenido del Hero -->
+        <div class="menu-hero-content">
+            <div class="container">
+                <h1 id="menu-hero-title" class="menu-title">Nuestra Carta</h1>
+                <p class="menu-subtitle">Descubre todos nuestros deliciosos platos preparados con ingredientes frescos y mucho sabor</p>
+            </div>
+        </div>
+
+        <!-- Navegación por Categorías -->
+        <div class="category-navigation">
+            <div class="container">
+                <nav class="category-nav" aria-label="Navegación por categorías">
+                    <a href="#broasters" class="category-nav-item active" data-category="broasters">
+                        <div class="category-icon">
+                            <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
+                        </div>
+                        <span class="category-label">Broasters</span>
+                    </a>
+
+                    <a href="#salchipapas" class="category-nav-item" data-category="salchipapas">
+                        <div class="category-icon">
+                            <i class="fas fa-hotdog" aria-hidden="true"></i>
+                        </div>
+                        <span class="category-label">Salchipapas</span>
+                    </a>
+
+                    <a href="#hamburguesas" class="category-nav-item" data-category="hamburguesas">
+                        <div class="category-icon">
+                            <i class="fas fa-hamburger" aria-hidden="true"></i>
+                        </div>
+                        <span class="category-label">Hamburguesas</span>
+                    </a>
+
+                    <a href="#bebidas" class="category-nav-item" data-category="bebidas">
+                        <div class="category-icon">
+                            <i class="fas fa-glass-cheers" aria-hidden="true"></i>
+                        </div>
+                        <span class="category-label">Bebidas</span>
+                    </a>
+
+                    <a href="#combos" class="category-nav-item" data-category="combos">
+                        <div class="category-icon">
+                            <i class="fas fa-gift" aria-hidden="true"></i>
+                        </div>
+                        <span class="category-label">Combos</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- === CATEGORÍAS DEL MENÚ === -->
+    <main class="menu-container">
+        <div class="container">
+            <!-- === BROASTERS === -->
+            <section id="broasters" class="menu-category active" data-category="broasters" aria-labelledby="broasters-title">
+                <div class="category-header">
+                    <h2 id="broasters-title" class="category-title">
+                        <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
+                        Broasters
+                    </h2>
+                    <p class="category-description">Nuestro pollo broaster crujiente y jugoso, preparado con nuestra receta secreta</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Alita Broaster -->
+                    <article class="product-card" data-category="broasters">
+                        <div class="product-badge badge-mas-vendido">Más Vendido</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/AlitaBroaster.jpg" alt="Alita Broaster - Crujientes alitas con marinado especial" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Alita Broaster</h3>
+                            <p class="product-description">Alitas crujientes con nuestro marinado especial y especias secretas</p>
+                            <div class="product-price">S/ 9.90</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Alita Broaster"
+                                data-price="9.90"
+                                data-image="assents/imagenes/productos/AlitaBroaster.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Alitas BBQ -->
+                    <article class="product-card" data-category="broasters">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/AlitasBBQ.jpg" alt="Alitas BBQ - Alitas bañadas en salsa BBQ casera" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Alitas BBQ</h3>
+                            <p class="product-description">Alitas bañadas en nuestra salsa BBQ casera con un toque ahumado</p>
+                            <div class="product-price">S/ 16.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Alitas BBQ"
+                                data-price="16.00"
+                                data-image="assents/imagenes/productos/AlitasBBQ.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Pierna Broaster -->
+                    <article class="product-card" data-category="broasters">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/AlitaBroaster.jpg" alt="Pierna Broaster - Pierna jugosa y dorada" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pierna Broaster</h3>
+                            <p class="product-description">Pierna jugosa y dorada, perfectamente sazonada y crujiente</p>
+                            <div class="product-price">S/ 10.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Pierna Broaster"
+                                data-price="10.00"
+                                data-image="assents/imagenes/productos/AlitaBroaster.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Pecho Broaster -->
+                    <article class="product-card" data-category="broasters">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/AlitasBBQ.jpg" alt="Pecho Broaster - Pecho empanizado y suave" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pecho Broaster</h3>
+                            <p class="product-description">Pecho empanizado, suave por dentro y crujiente por fuera</p>
+                            <div class="product-price">S/ 11.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Pecho Broaster"
+                                data-price="11.00"
+                                data-image="ssents/imagenes/productos/AlitasBBQ.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- 8 Piezas Broaster -->
+                    <article class="product-card" data-category="broasters">
+                        <div class="product-badge badge-oferta">-15%</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/AlitaBroaster.jpg" alt="8 Piezas Broaster - Combo familiar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>8 Piezas Broaster</h3>
+                            <p class="product-description">Combo familiar con 8 piezas mixtas de nuestro pollo broaster</p>
+                            <div class="product-price">
+                                <span class="old-price">S/ 45.00</span>
+                                S/ 38.00
+                            </div>
+                            <button class="btn btn-add-cart"
+                                data-name="8 Piezas Broaster"
+                                data-price="38.00"
+                                data-image="assets/images/productos/AlitasBBQ.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- === SALCHIPAPAS === -->
+            <section id="salchipapas" class="menu-category" data-category="salchipapas" aria-labelledby="salchipapas-title">
+                <div class="category-header">
+                    <h2 id="salchipapas-title" class="category-title">
+                        <i class="fas fa-hotdog" aria-hidden="true"></i>
+                        Salchipapas
+                    </h2>
+                    <p class="category-description">La combinación perfecta de papas doradas y salchichas con nuestros aderezos especiales</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Salchipapa Clásica -->
+                    <article class="product-card" data-category="salchipapas">
+                        <div class="product-badge badge-clasico">Clásico</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salcgipapa.jpg" alt="Salchipapa Clásica - Papas doradas con salchicha" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Salchipapa Clásica</h3>
+                            <p class="product-description">Papas doradas con salchicha, mayonesa, ketchup y mostaza</p>
+                            <div class="product-price">S/ 6.90</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Salchipapa Clásica"
+                                data-price="6.90"
+                                data-image="assents/imagenes/productos/Salcgipapa.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Salchipapa Especial -->
+                    <article class="product-card" data-category="salchipapas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salcgipapa.jpg" alt="Salchipapa Especial - Con huevo y queso derretido" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Salchipapa Especial</h3>
+                            <p class="product-description">Salchicha, huevo, queso derretido y todos nuestros aderezos</p>
+                            <div class="product-price">S/ 9.50</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Salchipapa Especial"
+                                data-price="9.50"
+                                data-image="assets/images/productos/Salchipapa.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Salchichorizo -->
+                    <article class="product-card" data-category="salchipapas">
+                        <div class="product-badge badge-especialidad">Especialidad</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salchichorizo.jpg" alt="Salchichorizo - Nuestra famosa especialidad" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Salchichorizo</h3>
+                            <p class="product-description">Nuestra famosa salchicha especial con chorizo y papas fritas</p>
+                            <div class="product-price">S/ 10.90</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Salchichorizo"
+                                data-price="10.90"
+                                data-image="assets/images/productos/Salchichorizo.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Salchipapa Mixta -->
+                    <article class="product-card" data-category="salchipapas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salchichorizo.jpg" alt="Salchipapa Mixta - Variedad de salchichas y toppings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Salchipapa Mixta</h3>
+                            <p class="product-description">Variedad de salchichas, tocino, huevo y todos los aderezos</p>
+                            <div class="product-price">S/ 14.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Salchipapa Mixta"
+                                data-price="14.00"
+                                data-image="assets/images/productos/Salchipapa.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- === HAMBURGUESAS === -->
+            <section id="hamburguesas" class="menu-category" data-category="hamburguesas" aria-labelledby="hamburguesas-title">
+                <div class="category-header">
+                    <h2 id="hamburguesas-title" class="category-title">
+                        <i class="fas fa-hamburger" aria-hidden="true"></i>
+                        Hamburguesas
+                    </h2>
+                    <p class="category-description">Hamburguesas jugosas con pan artesanal y ingredientes frescos</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Hamburguesa Clásica -->
+                    <article class="product-card" data-category="hamburguesas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/HamburguesaClasica.jpg" alt="Hamburguesa Clásica - Carne, lechuga, tomate y salsa especial" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hamburguesa Clásica</h3>
+                            <p class="product-description">Carne, lechuga, tomate, cebolla y nuestra salsa especial</p>
+                            <div class="product-price">S/ 8.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Hamburguesa Clásica"
+                                data-price="8.00"
+                                data-image="assets/images/productos/HamburguesaClasica.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Hamburguesa con Queso -->
+                    <article class="product-card" data-category="hamburguesas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/HamburguesaRoyal.jpg" alt="Hamburguesa con Queso - Doble carne y queso cheddar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hamburguesa con Queso</h3>
+                            <p class="product-description">Doble carne, queso cheddar, tocino y vegetales frescos</p>
+                            <div class="product-price">S/ 12.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Hamburguesa con Queso"
+                                data-price="12.00"
+                                data-image="assets/images/productos/HamburguesaRoyal.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Hamburguesa BBQ -->
+                    <article class="product-card" data-category="hamburguesas">
+                        <div class="product-badge badge-nuevo">Nuevo</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salchichorizo.jpg" alt="Hamburguesa BBQ - Con salsa BBQ y aros de cebolla" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hamburguesa BBQ</h3>
+                            <p class="product-description">Carne, salsa BBQ, aros de cebolla y queso mozzarella</p>
+                            <div class="product-price">S/ 14.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Hamburguesa BBQ"
+                                data-price="14.00"
+                                data-image="assets/images/productos/HamburguesaRoyal.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Mega Hamburguesa -->
+                    <article class="product-card" data-category="hamburguesas">
+                        <div class="product-badge badge-mega">Mega</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/HamburguesaRoyal.jpg" alt="Mega Hamburguesa - Triple carne con todos los toppings" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mega Hamburguesa</h3>
+                            <p class="product-description">Triple carne, triple queso, tocino, huevo y todos los aderezos</p>
+                            <div class="product-price">S/ 18.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Mega Hamburguesa"
+                                data-price="18.00"
+                                data-image="assents/imagenes/productos/HamburguesaRoyal.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- === BEBIDAS === -->
+            <section id="bebidas" class="menu-category" data-category="bebidas" aria-labelledby="bebidas-title">
+                <div class="category-header">
+                    <h2 id="bebidas-title" class="category-title">
+                        <i class="fas fa-glass-cheers" aria-hidden="true"></i>
+                        Bebidas
+                    </h2>
+                    <p class="category-description">Refrescos y bebidas para acompañar tu comida</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Chicha Morada -->
+                    <article class="product-card" data-category="bebidas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/ChicaMorada.jpg" alt="Chicha Morada - Refrescante bebida tradicional peruana" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Chicha Morada 1Lt</h3>
+                            <p class="product-description">Nuestra refrescante chicha morada tradicional peruana</p>
+                            <div class="product-price">S/ 8.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Chicha Morada 1Lt"
+                                data-price="8.00"
+                                data-image="assents/imagenes/productos/ChicaMorada.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Gaseosas -->
+                    <article class="product-card" data-category="bebidas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/ChicaMorada.jpg" alt="Gaseosas - Coca Cola, Inca Kola, Sprite o Fanta" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gaseosa 500ml</h3>
+                            <p class="product-description">Coca Cola, Inca Kola, Sprite o Fanta Orange</p>
+                            <div class="product-price">S/ 4.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Gaseosa 500ml"
+                                data-price="4.00"
+                                data-image="assents/imagenes/productos/ChicaMorada.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Jugos Naturales -->
+                    <article class="product-card" data-category="bebidas">
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/ChicaMorada.jpg" alt="Jugos Naturales - Naranja, Maracuyá, Fresa o Piña" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Jugo Natural 500ml</h3>
+                            <p class="product-description">Naranja, Maracuyá, Fresa o Piña. Hechos al momento</p>
+                            <div class="product-price">S/ 6.00</div>
+                            <button class="btn btn-add-cart"
+                                data-name="Jugo Natural 500ml"
+                                data-price="6.00"
+                                data-image="assents/imagenes/productos/ChicaMorada.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- === COMBOS === -->
+            <section id="combos" class="menu-category" data-category="combos" aria-labelledby="combos-title">
+                <div class="category-header">
+                    <h2 id="combos-title" class="category-title">
+                        <i class="fas fa-gift" aria-hidden="true"></i>
+                        Combos Especiales
+                    </h2>
+                    <p class="category-description">Combos perfectos para disfrutar con amigos y familia</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Combo Familiar -->
+                    <article class="product-card combo-card" data-category="combos">
+                        <div class="product-badge badge-oferta">-20%</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/Salcgipapa.jpg" alt="Combo Familiar - 4 Alitas + Salchipapa + 2 Gaseosas" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Combo Familiar</h3>
+                            <p class="product-description">4 Alitas Broaster + Salchipapa Mixta + 2 Gaseosas 1Lt</p>
+                            <div class="product-price">
+                                <span class="old-price">S/ 42.00</span>
+                                S/ 33.60
+                            </div>
+                            <button class="btn btn-add-cart"
+                                data-name="Combo Familiar"
+                                data-price="33.60"
+                                data-image="assets/images/productos/Salchipapa.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Combo Pareja -->
+                    <article class="product-card combo-card" data-category="combos">
+                        <div class="product-badge badge-oferta">-15%</div>
+                        <div class="product-image">
+                            <img src="assents/imagenes/productos/HamburguesaClasica.jpg" alt="Combo Pareja - 2 Hamburguesas + Papas + 2 Gaseosas" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Combo Pareja</h3>
+                            <p class="product-description">2 Hamburguesas Clásicas + Papas Fritas + 2 Gaseosas</p>
+                            <div class="product-price">
+                                <span class="old-price">S/ 28.00</span>
+                                S/ 23.80
+                            </div>
+                            <button class="btn btn-add-cart"
+                                data-name="Combo Pareja"
+                                data-price="23.80"
+                                data-image="assets/images/productos/HamburguesaClasica.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Combo Individual -->
+                    <article class="product-card combo-card" data-category="combos">
+                        <div class="product-badge badge-oferta">-10%</div>
+                        <div class="product-image">
+                            <img src="assets/images/productos/Salchipapa.jpg" alt="Combo Individual - Salchipapa + Gaseosa + Postre" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Combo Individual</h3>
+                            <p class="product-description">Salchipapa Especial + Gaseosa 500ml + Postre</p>
+                            <div class="product-price">
+                                <span class="old-price">S/ 16.00</span>
+                                S/ 14.40
+                            </div>
+                            <button class="btn btn-add-cart"
+                                data-name="Combo Individual"
+                                data-price="14.40"
+                                data-image="assets/images/productos/Salchipapa.jpg">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Agregar al Pedido
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- === SECCIÓN CTA === -->
+    <section class="menu-cta" aria-labelledby="menu-cta-title">
+        <div class="container">
+            <div class="cta-content">
+                <h2 id="menu-cta-title">¿Listo para ordenar?</h2>
+                <p>Haz tu pedido ahora y disfruta de la mejor comida en la comodidad de tu hogar</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/51970170964?text=Hola%20La%20Casa%20de%20Luci,%20quiero%20hacer%20un%20pedido"
+                       class="btn btn-whatsapp" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        Pedir por WhatsApp
+                    </a>
+                    <a href="cart.html" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        Ver Mi Carrito
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="assents/imagenes/iconos/LogoBlanco.png" alt="La Casa de Luci" class="logo-img">
+                    </div>
+                    <p>Comida rápida con sabor casero en el corazón de Carabayllo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Carta</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cart.html">Carrito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (+51) 970 170 964</li>
+                        <li><i class="fas fa-envelope"></i> lacasadeluci@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Carabayllo, Lima</li>
+                        <li><i class="fas fa-clock"></i> 10:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politicas-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Casa de Luci - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BOTÓN WHATSAPP === -->
+    <a href="https://wa.me/51970170964?text=Hola%20La%20Casa%20de%20Luci,%20quiero%20hacer%20un%20pedido"
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assents/js/menu.js"></script>
+    <script src="assents/js/cart-system.js"></script>
+    <script src="assents/js/navigation.js"></script>
+    <script src="assents/js/carousel.js"></script>
+    <script src="assents/js/modals.js"></script>
+    <script src="assents/js/main.js"></script>
+</body>
+</html>

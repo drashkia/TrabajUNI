@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras - La Casa de Luci. Revisa y gestiona tus productos antes de realizar el pedido.">
+    <meta name="keywords" content="carrito, compras, pedido, delivery, comida rápida, La Casa de Luci">
+    <meta name="author" content="La Casa de Luci">
+    
+    <title>Carrito de Compras - La Casa de Luci</title>
+    
+    <link rel="icon" href="assents/imagenes/iconos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assents/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- === HEADER SOLIDO === -->
+    <header class="main-header solid-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assents/imagenes/iconos/LogoSf2.png" alt="La Casa de Luci" width="70" height="40">
+                <h1>La Casa de Luci</h1>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="menu.html">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    <span>Carta</span>
+                </a>
+                <a href="nosotros.html">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <span>Nosotros</span>
+                </a>
+                <a href="cart.html" class="active">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <!--<a href="login.html" class="btn-login">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                    <span>Ingresar</span>
+                </a>-->
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- === CONTENIDO PRINCIPAL DEL CARRITO === -->
+    <main class="cart-main">
+        <div class="container">
+            <div class="cart-header">
+                <h1 class="cart-title">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    Tu Carrito de Compras
+                </h1>
+                <p class="cart-subtitle">Revisa y gestiona tus productos antes de realizar el pedido</p>
+            </div>
+
+            <div class="cart-layout">
+                <!-- === ITEMS DEL CARRITO === -->
+                <section class="cart-items-section" aria-labelledby="cart-items-title">
+                    <h2 id="cart-items-title" class="sr-only">Productos en el carrito</h2>
+                    
+                    <div class="cart-items-container">
+                        <!-- Los items del carrito se cargan dinámicamente aquí -->
+                        <div class="empty-cart-message">
+                            <div class="empty-cart-icon">
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            </div>
+                            <h3>Tu carrito está vacío</h3>
+                            <p>Agrega algunos productos deliciosos de nuestro menú</p>
+                            <a href="menu.html" class="btn btn-primary">
+                                <i class="fas fa-utensils" aria-hidden="true"></i>
+                                Ver Menú
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- === RESUMEN DEL PEDIDO === -->
+                <aside class="cart-summary-section" aria-labelledby="cart-summary-title">
+                    <div class="cart-summary-card">
+                        <h2 id="cart-summary-title" class="summary-title">
+                            <i class="fas fa-receipt" aria-hidden="true"></i>
+                            Resumen del Pedido
+                        </h2>
+
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span class="summary-value">S/ 0.00</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Delivery:</span>
+                                <span class="summary-value">S/ 5.00</span>
+                            </div>
+                            
+                            <div class="summary-row summary-total">
+                                <span>Total:</span>
+                                <span class="summary-value">S/ 5.00</span>
+                            </div>
+                        </div>
+
+                        <div class="delivery-info">
+                            <h3>
+                                <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                                Información de Delivery
+                            </h3>
+                            <div class="delivery-details">
+                                <div class="delivery-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>Tiempo estimado: 25-35 min</span>
+                                </div>
+                                <div class="delivery-item">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Zona de cobertura: Carabayllo</span>
+                                </div>
+                                <div class="delivery-item">
+                                    <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                                    <span>Costo delivery: S/ 5.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="summary-actions">
+                            <button class="btn btn-primary btn-checkout" disabled>
+                                <i class="fas fa-credit-card" aria-hidden="true"></i>
+                                Proceder al Pago
+                            </button>
+                            
+                            <button class="btn btn-outline btn-clear-cart">
+                                <i class="fas fa-trash" aria-hidden="true"></i>
+                                Vaciar Carrito
+                            </button>
+                            
+                            <a href="menu.html" class="btn btn-secondary btn-continue-shopping">
+                                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                                Seguir Comprando
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- === MÉTODOS DE PAGO === -->
+                    <div class="payment-methods">
+                        <h3>
+                            <i class="fas fa-wallet" aria-hidden="true"></i>
+                            Métodos de Pago
+                        </h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                <span>Yape / Plin</span>
+                            </div>
+                            <div class="payment-option">
+                                <i class="fas fa-university" aria-hidden="true"></i>
+                                <span>Transferencia</span>
+                            </div>
+                            <div class="payment-option">
+                                <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                                <span>Efectivo</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- === INFORMACIÓN ADICIONAL === -->
+            <section class="cart-info-section">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Compra Segura</h3>
+                        <p>Tu información y pedido están protegidos</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                        </div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Recibe tu pedido en menos de 35 minutos</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Estamos aquí para ayudarte con tu pedido</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="assents/imagenes/iconos/LogoBlanco.png" alt="La Casa de Luci" class="logo-img">
+                    </div>
+                    <p>Comida rápida con sabor casero en el corazón de Carabayllo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Carta</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cart.html">Carrito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i>(+51) 970 170 964</li>
+                        <li><i class="fas fa-envelope"></i>lacasadeluci@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Carabayllo, Lima</li>
+                        <li><i class="fas fa-clock"></i>10:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politicas-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Casa de Luci - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BOTÓN WHATSAPP === -->
+    <a href="https://wa.me/51970170964?text=Hola%20La%20Casa%20de%20Luci,%20quiero%20hacer%20un%20pedido"
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- === SCRIPTS === -->
+    <script src="assents/js/cart-system.js"></script>
+    <script src="assents/js/navigation.js"></script>
+    <script src="assents/js/main.js"></script>
+</body>
+</html>

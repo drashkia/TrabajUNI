@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Casa de Luci - Comida rápida con sabor casero. Disfruta de nuestros broasters, salchipapas y hamburguesas en Carabayllo.">
+    <meta name="keywords" content="comida rápida, broaster, salchipapas, hamburguesas, pollo, Carabayllo, delivery">
+    <meta name="author" content="La Casa de Luci">
+    
+    <title>La Casa de Luci - Comida Rápida con Sabor Casero</title>
+    
+    <link rel="icon" href="assents/imagenes/iconos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assents/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- === HEADER === -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assents/imagenes/iconos/LogoBlanco.png" alt="La Casa de Luci" width="70" height="40">
+                <h1>La Casa de Luci</h1>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html" class="active">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="menu.html">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    <span>Carta</span>
+                </a>
+                <a href="nosotros.html">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <span>Nosotros</span>
+                </a>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <!--<a href="login.html" class="btn-login">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                    <span>Ingresar</span>
+                </a>-->
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- === HERO SECTION === -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+            <h1 id="hero-title" class="hero-title">Bienvenidos a La Casa de Luci</h1>
+            <p class="hero-subtitle">Más que comida: una experiencia en cada mordida</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    Ver Carta Completa
+                </a>
+                <a href="#featured" class="btn btn-secondary">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    Ver Especialidades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- === PRODUCTOS DESTACADOS === -->
+    <section id="featured" class="featured-products" aria-labelledby="featured-title">
+        <div class="container">
+            <h2 id="featured-title" class="section-title">Nuestras Especialidades</h2>
+            <p class="section-subtitle">Los platos más pedidos por nuestros clientes</p>
+
+            <div class="products-grid">
+                <!-- Producto 1: Alita Broaster -->
+                <article class="product-card" data-category="broasters">
+                    <div class="product-badge badge-mas-vendido">Más Vendido</div>
+                    <div class="product-image">
+                        <img src="assents/imagenes/productos/AlitaBroaster.jpg" alt="Alita Broaster" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alita Broaster</h3>
+                        <p class="product-description">Alitas crujientes con nuestro marinado especial</p>
+                        <div class="product-price">S/ 9.90</div>
+                        <button class="btn btn-add-cart"
+                            data-name="Alita Broaster"
+                            data-price="9.90"
+                            data-image="assents/imagenes/productos/AlitaBroaster.jpg">
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                            Agregar al Pedido
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Salchipapa Clásica -->
+                <article class="product-card" data-category="salchipapas">
+                    <div class="product-badge badge-clasico">Clásico</div>
+                    <div class="product-image">
+                        <img src="assents/imagenes/productos/Salcgipapa.jpg" alt="Salchipapa Clásica" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Salchipapa Clásica</h3>
+                        <p class="product-description">Papas doradas con salchicha y salsas especiales</p>
+                        <div class="product-price">S/ 6.90</div>
+                        <button class="btn btn-add-cart"
+                            data-name="Salchipapa Clásica"
+                            data-price="6.90"
+                            data-image="assents/imagenes/productos/Salcgipapa.jpg">
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                            Agregar al Pedido
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Alitas BBQ -->
+                <article class="product-card" data-category="broasters">
+                    <div class="product-badge badge-especialidad">Especialidad</div>
+                    <div class="product-image">
+                        <img src="assents/imagenes/productos/AlitasBBQ.jpg" alt="Alitas BBQ" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Alitas BBQ</h3>
+                        <p class="product-description">Alitas bañadas en salsa BBQ casera</p>
+                        <div class="product-price">S/ 16.00</div>
+                        <button class="btn btn-add-cart"
+                            data-name="Alitas BBQ"
+                            data-price="16.00"
+                            data-image="assents/imagenes/productos/AlitasBBQ.jpg">
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                            Agregar al Pedido
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center">
+                <a href="menu.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    Ver Todos los Productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- === CARACTERÍSTICAS === -->
+    <section class="features" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title" class="section-title">¿Por Qué Elegirnos?</h2>
+            
+            <div class="features-grid features-grid-2-2">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                    </div>
+                    <h3>Delivery Rápido</h3>
+                    <p>Entregamos en Carabayllo en menos de 30 minutos</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils" aria-hidden="true"></i>
+                    </div>
+                    <h3>Calidad Superior</h3>
+                    <p>Ingredientes frescos y preparación artesanal</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                    </div>
+                    <h3>Múltiples Pagos</h3>
+                    <p>Aceptamos Yape, Plin, transferencias y efectivo</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <h3>Horario Extendido</h3>
+                    <p>Abiertos de 10:00 AM a 10:00 PM todos los días</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === FOOTER === -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="assents/imagenes/iconos/LogoBlanco.png" alt="La Casa de Luci" class="logo-img">
+                    </div>
+                    <p>Comida rápida con sabor casero en el corazón de Carabayllo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Carta</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cart.html">Carrito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (+51) 970 170 964</li>
+                        <li><i class="fas fa-envelope"></i> lacasadeluci@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Carabayllo, Lima</li>
+                        <li><i class="fas fa-clock"></i> 10:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="politicas-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Casa de Luci - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === BOTÓN WHATSAPP === -->
+    <a href="https://wa.me/51970170964?text=Hola%20La%20Casa%20de%20Luci,%20quiero%20hacer%20un%20pedido"
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="assents/js/cart-system.js"></script>
+    <script src="assents/js/navigation.js"></script>
+    <script src="assents/js/main.js"></script>
+</body>
+</html>
