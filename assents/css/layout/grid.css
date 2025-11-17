@@ -1,0 +1,61 @@
+/* ==== SISTEMA DE GRIDS ==== */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ==== SECCIONES GENERALES ==== */
+section {
+    padding: 3rem 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--bg-light);
+}
+
+section:nth-child(odd) {
+    background-color: var(--bg-white);
+}
+
+.featured-products {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+.promotions {
+    padding: 4rem 0;
+    background-color: var(--bg-white);
+}
+
+.features {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+
+.cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+}

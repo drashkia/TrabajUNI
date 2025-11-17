@@ -1,0 +1,185 @@
+/* HEADER TRANSPARENTE (solo para index.html en desktop) */
+.main-header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.main-header.scrolled {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-lg);
+    position: fixed;
+}
+
+
+/* Header sólido en móvil para index.html */
+@media (max-width: 768px) {
+    .main-header {
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-light)) ;
+        box-shadow: var(--shadow-lg) ;
+        position: fixed ;
+        top: 0 ;
+    }
+    .main-header.logo img {
+        content: url(../../imagenes/iconos/LogoSf2.png);
+    }
+
+    .main-header .logo h1 {
+        color: white !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .main-header .main-nav a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .main-header .main-nav a:hover,
+    .main-header .main-nav a.active {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Header transparente específico (solo desktop) */
+@media (min-width: 769px) {
+    .main-header:not(.scrolled) .logo h1 {
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-header:not(.scrolled) .main-nav a {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-header:not(.scrolled) .main-nav a:hover,
+    .main-header:not(.scrolled) .main-nav a.active {
+        color: white;
+    }
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color del menu toggle en móvil */
+@media (max-width: 768px) {
+    .menu-toggle {
+        color: white !important;
+    }
+}
+
+/* ==== HEADER COMÚN PARA TODAS LAS PÁGINAS (excepto index) ==== */
+
+/* Header sólido para páginas internas */
+.solid-header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-light)) !important;
+    box-shadow: var(--shadow-lg) !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
+.solid-header .logo h1 {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.solid-header .main-nav a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.solid-header .main-nav a:hover,
+.solid-header .main-nav a.active {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.solid-header .main-nav a.active::after {
+    background-color: white !important;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de brillo para el botón ingresar en header sólido */
+.solid-header .btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.solid-header .btn-login:hover::before {
+    left: 100%;
+}
+
+.solid-header .btn-login {
+    position: relative;
+    overflow: hidden;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+

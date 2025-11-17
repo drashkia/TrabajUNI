@@ -1,0 +1,481 @@
+/* ==== PÁGINA MENÚ/CARTA ==== */
+
+/* ==== HERO DEL MENÚ ==== */
+.menu-hero-separated {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+/* Ajuste contenido hero más arriba */
+.menu-hero-separated .menu-hero-content {
+    position: absolute;
+    top: 35% !important;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 5;
+    padding: 0 1rem;
+}
+
+.menu-hero-separated .menu-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem !important; 
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease;
+}
+
+.menu-hero-separated .menu-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Carrusel del menú */
+.menu-hero-separated .menu-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-hero-separated .carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-hero-separated .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.menu-hero-separated .carousel-slide.active {
+    opacity: 1;
+}
+
+.menu-hero-separated .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-hero-separated .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
+}
+
+/* Controles del carrusel */
+.menu-hero-separated .carousel-prev,
+.menu-hero-separated .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-hero-separated .carousel-prev:hover,
+.menu-hero-separated .carousel-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-hero-separated .carousel-prev {
+    left: 2rem;
+}
+
+.menu-hero-separated .carousel-next {
+    right: 2rem;
+}
+
+/* INDICADORES DEL CARRUSEL OCULTOS */
+.menu-hero-separated .carousel-indicators {
+    display: none !important; /* Ocultos completamente */
+}
+
+/* ==== NAVEGACIÓN POR CATEGORÍAS ==== */
+.menu-hero-separated .category-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 5;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hero-separated .category-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.menu-hero-separated .category-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    min-width: 100px;
+    position: relative;
+}
+
+.menu-hero-separated .category-nav-item:hover,
+.menu-hero-separated .category-nav-item.active {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.menu-hero-separated .category-nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu-hero-separated .category-nav-item:hover::after,
+.menu-hero-separated .category-nav-item.active::after {
+    width: 30px;
+}
+
+.menu-hero-separated .category-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(117, 86, 67, 0.3);
+}
+
+.menu-hero-separated .category-nav-item:hover .category-icon,
+.menu-hero-separated .category-nav-item.active .category-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(117, 86, 67, 0.4);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+}
+
+.menu-hero-separated .category-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* ==== CONTENEDOR PRINCIPAL DEL MENÚ ==== */
+.menu-container {
+    padding: 4rem 0;
+    background: var(--bg-white);
+}
+
+/* ==== CATEGORÍAS DEL MENÚ ==== */
+.menu-category {
+    margin-bottom: 4rem;
+    display: none;
+}
+
+.menu-category.active {
+    display: block;
+    animation: fadeInUp 0.6s ease;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.category-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Precios con descuento */
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* ==== SECCIÓN CTA ESPECÍFICA DEL MENÚ ==== */
+.menu-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../imagenes/productos/ChicaMorada.jpg'); /*pag. pictures*/
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.menu-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.menu-cta p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu-cta .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==== RESPONSIVE DESIGN PARA MENÚ ==== */
+@media (max-width: 1024px) {
+    .menu-hero-separated {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .menu-hero-separated .menu-title {
+        font-size: 3rem;
+    }
+    
+    .menu-hero-separated .menu-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .menu-hero-separated .category-nav {
+        padding: 1rem 0;
+    }
+    
+    .menu-hero-separated .category-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .menu-hero-separated .category-label {
+        font-size: 0.85rem;
+    }
+    
+    .category-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-hero-separated {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .menu-hero-separated .menu-title {
+        font-size: 2.2rem;
+    }
+    
+    .menu-hero-separated .menu-subtitle {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+    
+    .menu-hero-separated .carousel-prev,
+    .menu-hero-separated .carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .menu-hero-separated .carousel-prev {
+        left: 1rem;
+    }
+    
+    .menu-hero-separated .carousel-next {
+        right: 1rem;
+    }
+    
+    .menu-hero-separated .category-nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.75rem 0;
+    }
+    
+    .menu-hero-separated .category-nav-item {
+        min-width: 80px;
+        padding: 0.5rem;
+    }
+    
+    .menu-hero-separated .category-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .menu-hero-separated .category-label {
+        font-size: 0.8rem;
+    }
+    
+    .category-title {
+        font-size: 2rem;
+    }
+    
+    .menu-cta .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu-cta .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-hero-separated {
+        height: 45vh;
+        min-height: 300px;
+    }
+    
+    .menu-hero-separated .menu-title {
+        font-size: 1.8rem;
+    }
+    
+    .menu-hero-separated .menu-subtitle {
+        font-size: 1rem;
+    }
+    
+    .menu-hero-separated .carousel-prev,
+    .menu-hero-separated .carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .menu-hero-separated .category-nav {
+        gap: 0.25rem;
+        padding: 0.5rem 0;
+    }
+    
+    .menu-hero-separated .category-nav-item {
+        min-width: 70px;
+        padding: 0.25rem;
+    }
+    
+    .menu-hero-separated .category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .menu-hero-separated .category-label {
+        font-size: 0.75rem;
+    }
+    
+    .category-title {
+        font-size: 1.8rem;
+    }
+    
+    .category-header {
+        margin-bottom: 2rem;
+    }
+    
+    .menu-container {
+        padding: 2rem 0;
+    }
+}
+
+/* ==== ANIMACIONES ==== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

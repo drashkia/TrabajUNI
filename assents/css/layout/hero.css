@@ -1,0 +1,153 @@
+/* ==== HERO PRINCIPAL ==== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, rgba(117, 86, 67, 0.85) 0%, rgba(90, 66, 48, 0.75) 100%), url('../../imagenes/layout/Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Eliminar el before conflictivo */
+.hero::before {
+    display: none;
+}
+
+/* ==== HERO SEPARADO (PARA MENÚ) ==== */
+.menu-hero-separated {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.menu-hero-separated .menu-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 5;
+    padding: 0 1rem;
+}
+
+.menu-hero-separated .menu-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-hero-separated .menu-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navegación por categorías */
+.menu-hero-separated .category-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.menu-hero-separated .category-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.menu-hero-separated .category-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    min-width: 100px;
+    position: relative;
+}
+
+.menu-hero-separated .category-nav-item:hover,
+.menu-hero-separated .category-nav-item.active {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.menu-hero-separated .category-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu-hero-separated .category-nav-item:hover .category-icon,
+.menu-hero-separated .category-nav-item.active .category-icon {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(117, 86, 67, 0.3);
+}
+
+.menu-hero-separated .category-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+}
